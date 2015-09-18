@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="DC7E8B0B-796F-FD48-AAD7-444153D0584E" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ViewColaborador">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 20:52:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>view_1</ordsAlias>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT tresdbhc.Colaborador.nome,&lt;br/&gt;  tresdbhc.Colaborador.Colaborador_PK&lt;br/&gt;FROM tresdbhc.Colaborador</userDefinedSQL>
+<parsed>true</parsed>
+<usedContainers>
+<container containerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nome" id="7A747DFF-1E1C-351E-602F-94EBEB8E6E5E">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 20:55:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (100 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>FAD25741-C847-7C1F-A144-7E06CBC46E73</referencedColumn>
+<table>27CB09E9-0302-C99D-EF4F-10A1394B7586</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Colaborador_PK" id="A705C128-1D1E-41E5-9171-1657DCF167A5">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 20:59:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER</dataType>
+<reference>false</reference>
+<referencedColumn>DB2D666A-FFFA-FD7A-609E-3185FCA2340D</referencedColumn>
+<table>27CB09E9-0302-C99D-EF4F-10A1394B7586</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="27CB09E9-0302-C99D-EF4F-10A1394B7586">
+<container>true</container>
+<schema>tresdbhc</schema>
+<tableName>Colaborador</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FAD25741-C847-7C1F-A144-7E06CBC46E73">
+<columnName>nome</columnName>
+<schema>tresdbhc</schema>
+<tableName>Colaborador</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DB2D666A-FFFA-FD7A-609E-3185FCA2340D">
+<columnName>Colaborador_PK</columnName>
+<schema>tresdbhc</schema>
+<tableName>Colaborador</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

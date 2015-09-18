@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="035A371F-32EE-B95D-B06B-C0A44227865C" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="BancoMonitoradoTicket">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:21:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsEnable>true</ordsEnable>
+<ordsAlias>table_4</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BancoMonitoradoTicket_PK" id="0E014A1E-310F-90D8-EBB0-53106D02573D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:22:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="frequenciaMonitoramento" id="47D4E364-25EF-6136-438E-0FFED412C0CF">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:32:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valorHoraNormal" id="3FAD14AA-EF98-B556-996F-0A9421747ED1">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:32:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valorHoraExtra" id="46492EF8-5E09-8AD6-679B-EFD0C732AA7A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:33:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rdbms" id="EF8497D5-E28A-397E-077A-119FC95D1E75">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:35:19 UTC</createdTime>
+<comment>oracle, sqlserver</comment>
+<commentInRDBMS>oracle, sqlserver</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>oracle, sqlserver</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ClienteContrato_FK" id="48913673-4B33-3FDD-14F9-251F1AD40701">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:31:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E13F41D0-6957-BC7D-8948-6A06BBF3EBD5" referredColumn="03A0C278-AEDD-BE5F-4E55-BEAC2F92C090"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9736FF33-19C5-0BAE-F565-53F0995118E3" name="BdMonitTicket_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:22:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E014A1E-310F-90D8-EBB0-53106D02573D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E25FD85-713C-9F7D-CC19-68C2F80FD049" name="BdMonitorTicket_CliCont_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:39:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48913673-4B33-3FDD-14F9-251F1AD40701"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

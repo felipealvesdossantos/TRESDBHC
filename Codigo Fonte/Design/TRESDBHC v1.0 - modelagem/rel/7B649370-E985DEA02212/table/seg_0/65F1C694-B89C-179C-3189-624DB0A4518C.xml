@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F1C694-B89C-179C-3189-624DB0A4518C" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="InstanciaSQLServer">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:28:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_30</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="InstanciaSQLServer_PK" id="A9B79B49-26BD-29F6-88A0-6884C7544F7A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:29:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeInstancia" id="65E4D201-328C-F469-6073-ECB3458BCC49">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:30:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoInstancia" id="64570665-1A83-DF2D-805C-55CCFA30523E">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-15 20:11:24 UTC</createdTime>
+<comment>single, always on </comment>
+<commentInRDBMS>single, always on </commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>single, always on </notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ServidorRdbms_FK" id="3029D701-C71E-D15A-4817-98D19E8DC087">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:31:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81533F98-F35B-576A-F23D-DDC575EE394F" referredColumn="A0AB025D-E766-CD32-1745-99B138B6FF3F"/>
+</associations>
+</Column>
+<Column name="BancoMonitorTicket_FK" id="2521DA30-AF3B-C4D1-5AAC-7E2C9EB09152">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:33:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="240BE25E-51C8-955F-13FD-7A9382F1AABA" referredColumn="0E014A1E-310F-90D8-EBB0-53106D02573D"/>
+</associations>
+</Column>
+<Column name="ColaboradorPreAnalise_FK" id="6CBEB0EE-DF4C-1615-5292-F7460CBFB2EC">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:35:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6FDCA65-9168-9E79-9039-2E75A84AE506" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+<Column name="ColaboradorAnalise_FK" id="6D44B947-C8AF-55BA-174E-C919CF91AEBC">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:37:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4234A6CC-4684-1C11-EC77-23AE5F638A0F" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA82081E-17CD-6638-B5FF-5C1F214B0A07" name="InstSQLSrv_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:29:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9B79B49-26BD-29F6-88A0-6884C7544F7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="642ECE99-80DC-B28D-BDAF-B07C3DEC9232" name="InstSQLSrv_BdMonitTicket_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:33:58 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2521DA30-AF3B-C4D1-5AAC-7E2C9EB09152"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B37FC620-42A9-DECE-E46A-6CB3671C5043" name="InstSQLSrv_ColabPreAnalise_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:35:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CBEB0EE-DF4C-1615-5292-F7460CBFB2EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F52E1560-0560-3F8B-7087-6189F49AC19D" name="InstSQLSrv_ColabAnalise_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:37:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D44B947-C8AF-55BA-174E-C919CF91AEBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A19136BD-0214-DABC-3551-2EDE3804EB78" name="InstSQLSrv_SrvRdbms_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 18:38:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3029D701-C71E-D15A-4817-98D19E8DC087"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

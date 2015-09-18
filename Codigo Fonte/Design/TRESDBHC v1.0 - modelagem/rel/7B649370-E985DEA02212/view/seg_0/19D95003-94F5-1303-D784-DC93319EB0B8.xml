@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="19D95003-94F5-1303-D784-DC93319EB0B8" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ViewNomeCliente">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 21:06:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>view_2</ordsAlias>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT tresdbhc.ClienteContrato.ClienteContrato_PK,&lt;br/&gt;  tresdbhc.ClienteContrato.nomeCliente&lt;br/&gt;FROM tresdbhc.ClienteContrato</userDefinedSQL>
+<parsed>true</parsed>
+<usedContainers>
+<container containerID="B19F5DA4-A24C-C97A-B864-518AEE88074B"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ClienteContrato_PK" id="A14D53AE-053A-98A5-7E0B-6C844E3AABB2">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 21:09:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER</dataType>
+<reference>false</reference>
+<referencedColumn>03A0C278-AEDD-BE5F-4E55-BEAC2F92C090</referencedColumn>
+<table>B19F5DA4-A24C-C97A-B864-518AEE88074B</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nomeCliente" id="078490E8-441A-7A86-C40F-3B4B1C29BC3D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 21:09:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (500 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>EA95558D-B83A-0F30-AAB9-1E08497A513A</referencedColumn>
+<table>B19F5DA4-A24C-C97A-B864-518AEE88074B</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B19F5DA4-A24C-C97A-B864-518AEE88074B">
+<container>true</container>
+<schema>tresdbhc</schema>
+<tableName>ClienteContrato</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="03A0C278-AEDD-BE5F-4E55-BEAC2F92C090">
+<columnName>ClienteContrato_PK</columnName>
+<schema>tresdbhc</schema>
+<tableName>ClienteContrato</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EA95558D-B83A-0F30-AAB9-1E08497A513A">
+<columnName>nomeCliente</columnName>
+<schema>tresdbhc</schema>
+<tableName>ClienteContrato</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

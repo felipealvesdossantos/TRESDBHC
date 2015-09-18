@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="tresdbhc" directorySegmentName="seg_0" id="88B4FDF8-4C96-B61B-D185-0D0A48F9759B">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:31:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsEnable>true</ordsEnable>
+<ordsAlias>dbhc</ordsAlias>
+</SchemaObject>

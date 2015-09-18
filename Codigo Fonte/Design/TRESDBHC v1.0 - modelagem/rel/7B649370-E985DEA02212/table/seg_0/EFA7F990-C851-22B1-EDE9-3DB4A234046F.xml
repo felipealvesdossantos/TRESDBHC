@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFA7F990-C851-22B1-EDE9-3DB4A234046F" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ServidorOracle">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:49:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsEnable>true</ordsEnable>
+<ordsAlias>table_7</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ServidorOracle_PK" id="3DF7136C-F6A2-756F-DB82-8DA7EA6C7995">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:50:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeServidor" id="D67E940B-4353-0078-EF16-55FDF9FF4517">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 20:02:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ipServidor" id="D4C70602-0307-96E3-B368-496F5446C375">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 20:03:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdCpu" id="A704143C-F497-CBFA-C8B5-FA7F50C2F578">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:25:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modeloCpu" id="07C35AEE-29DB-C317-E83F-74E8A12E252D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:26:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sistemaOperacional" id="1639C527-092A-6035-0515-2ADA93D1EDC1">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:26:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdMemoriaRam" id="D65996EB-B2C3-498B-3396-D3CE567A9CBA">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:27:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdDisco" id="F997DDC5-5017-9D27-126F-AC7BD9D9A13D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:27:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hypervisor" id="6740AB53-1848-24AA-8045-B68DA0D8ADF2">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:29:01 UTC</createdTime>
+<comment>nenhum, oracle vm, vmware, virtual box, hyper-v, xen server community, xen server citrix</comment>
+<commentInRDBMS>nenhum, oracle vm, vmware, virtual box, hyper-v, xen server community, xen server citrix</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>nenhum, oracle vm, vmware, virtual box, hyper-v, xen server community, xen server citrix</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0EBB009D-EE4F-5399-EF64-1B1188C4AD46" name="SrvOracle_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 20:02:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DF7136C-F6A2-756F-DB82-8DA7EA6C7995"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

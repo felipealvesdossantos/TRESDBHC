@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3764052D-8232-EEA4-3EC1-5BB0A2093B69" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="DBOracle">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:34:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DBOracle_PK" id="393BEE51-AB0A-E74C-F81E-6BF9B6328C5A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:35:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeBanco" id="EA47A339-E0E2-5C0E-0AF2-1B1FE498F28A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:36:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoBanco" id="FCD47934-17F5-7B40-21A8-E076F22C4F94">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:37:03 UTC</createdTime>
+<comment>single, rac, extend rac, oda, exadata</comment>
+<commentInRDBMS>single, rac, extend rac, oda, exadata</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>single, rac, extend rac, oda, exadata</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ColaboradorPreAnalise_FK" id="51B20086-F509-24BA-BB08-9A546BDEE278">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:50:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6D219B6-E358-B6AC-2239-42F3BD446637" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+<Column name="ColaboradorAnalise_FK" id="FC51EB50-1AE8-62F5-7B81-336BBBFE8747">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:51:04 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8C264B73-BB9D-2022-620D-C2779F0E8C09" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+<Column name="BancoMonitoradoTicket_FK" id="880D422A-C731-317C-C492-7855B553F2C1">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:09:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F06FCB1-DC2A-FB2B-7801-8512DE97CB1B" referredColumn="0E014A1E-310F-90D8-EBB0-53106D02573D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="98348268-115E-2D44-2A20-CC631E099F10" name="DBOracle_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:35:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="393BEE51-AB0A-E74C-F81E-6BF9B6328C5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7354C6EF-B45C-0D8F-EAAF-8092FF3A908E" name="DBOracle_Colab_FK1">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:51:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51B20086-F509-24BA-BB08-9A546BDEE278"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E49FD711-D9C6-1CC6-7DBE-A84E3DC2F0A3" name="DBOracle_Colab_FK2">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 00:52:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC51EB50-1AE8-62F5-7B81-336BBBFE8747"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB53B2F5-8E4D-139A-20DF-AA8CDD45A244" name="DBOracle_BdMonitTicket_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:10:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="880D422A-C731-317C-C492-7855B553F2C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

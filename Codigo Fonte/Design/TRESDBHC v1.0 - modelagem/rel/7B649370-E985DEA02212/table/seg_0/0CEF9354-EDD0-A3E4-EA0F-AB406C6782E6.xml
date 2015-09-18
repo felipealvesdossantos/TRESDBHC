@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0CEF9354-EDD0-A3E4-EA0F-AB406C6782E6" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ParecerSQLServer">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:07:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_37</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ParecerSQLServer_PK" id="41797DD8-F91F-DE60-4103-7910F909387D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:07:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="preAnalise" id="0D10A561-B7CD-CD6D-AA9A-791089F100C2">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:08:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="analise" id="9A14417C-EE95-787C-588C-B78012A888B2">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:08:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ColaboradorAnalise_FK" id="C0A59439-38DB-649F-402D-21E8A476FEE8">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:10:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88D329A4-DE79-5278-9EC1-86D411967058" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+<Column name="ColaboradorPreAnalise_FK" id="0BE50BE4-E8A2-0575-ACD2-300531D9300D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:10:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC47C0D6-EAAA-1D7C-52DC-75DFE7AB44DF" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1633E104-7872-3B6E-C106-5CED936A35FC" name="ParSQLSrv_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:07:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41797DD8-F91F-DE60-4103-7910F909387D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2C9AA0B-3C6B-743D-7F60-5022B547D6D5" name="ParSQLSrv_ColabAnalise_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:10:47 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0A59439-38DB-649F-402D-21E8A476FEE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="967F69D5-F0D8-7AE4-B873-85B6523A3BF4" name="ParSQLSrvr_ColabPreAnalise_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 04:10:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BE50BE4-E8A2-0575-ACD2-300531D9300D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

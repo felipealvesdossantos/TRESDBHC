@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85896A88-F0D5-3056-9980-4DB8DA3ED84A" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="TarefasAdministrativas">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:04:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_20</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TarefasAdministrativas_PK" id="3935D50F-CF75-DF06-9EAE-CCE5CFDEDB06">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:04:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dataAbertura" id="B121F5F9-80F5-F74F-0693-942DB51EA786">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:05:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dataFechamento" id="4ECF560A-1066-DD94-ED40-3703AF3F79B9">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:14:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="D03E6720-9939-B842-7DA7-F88BF399D522">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:05:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="statusTarefa" id="AF2DD197-6B0D-B3A2-C92F-0E690F08EEC9">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:06:07 UTC</createdTime>
+<comment>0 - fechada, 1 - aberta, 2 - impedimento externo, 3 - impedimento interno, 4 - pendencia</comment>
+<commentInRDBMS>0 - fechada, 1 - aberta, 2 - impedimento externo, 3 - impedimento interno, 4 - pendencia</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>0 - fechada, 1 - aberta, 2 - impedimento externo, 3 - impedimento interno, 4 - pendencia</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departamento" id="5705DE2F-0D72-6BB3-4C3B-C0474D384A31">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:08:25 UTC</createdTime>
+<comment>tecnico, comercial, administrativo, financeiro</comment>
+<commentInRDBMS>tecnico, comercial, administrativo, financeiro</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>tecnico, comercial, administrativo, financeiro</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="conclusao" id="D4EE97FC-52D9-87C5-1EEA-8F459D22353B">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:14:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Colaborador_FK" id="B8DCB437-9CCF-1A87-E13D-C62EB8E5B16A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:12:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91059D97-7DAE-FEE9-2F08-02F13FF7708E" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5A1C7BDD-6A0D-71F4-9106-E3A31F647FF4" name="TarefasAdministrativas_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3935D50F-CF75-DF06-9EAE-CCE5CFDEDB06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F88D64C0-707E-5BF4-1FB3-60C810637635" name="TarefasAdm_Colab_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:12:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8DCB437-9CCF-1A87-E13D-C62EB8E5B16A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

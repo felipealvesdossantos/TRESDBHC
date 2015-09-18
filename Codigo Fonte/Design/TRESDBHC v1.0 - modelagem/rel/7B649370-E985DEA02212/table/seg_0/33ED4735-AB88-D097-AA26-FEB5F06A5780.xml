@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33ED4735-AB88-D097-AA26-FEB5F06A5780" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ServidorRdbms">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:23:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_29</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ServidorRdbms_PK" id="A0AB025D-E766-CD32-1745-99B138B6FF3F">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:24:09 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeServidor" id="1A23ED49-810C-377B-B449-DB978FBFDD8C">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:24:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ipServidor" id="131810D7-75DD-BB74-4E61-40877A30B0A0">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:25:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdCpu" id="62FF4F0A-8BC0-180A-62EF-2F02DD016368">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:33:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modeloCpu" id="0FEF728C-ED7C-CC61-445D-8D62F352D3A6">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:34:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sistemaOperacional" id="D2D04ABA-9FED-3ADC-1746-1939191137BD">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:34:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdMemoriaRam" id="C6B7E3DC-515D-5170-C8F5-9CB252948426">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:34:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdDisco" id="9F81C333-2999-9D1A-88C5-CD7A9D695BFA">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:35:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hypervisor" id="FCCA488B-3560-6BD2-71C0-8CCBC5268086">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:35:39 UTC</createdTime>
+<comment>nenhum, oracle vm, vmware, virtual box, hyper-v, xen server community, xen server citrix</comment>
+<commentInRDBMS>nenhum, oracle vm, vmware, virtual box, hyper-v, xen server community, xen server citrix</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>nenhum, oracle vm, vmware, virtual box, hyper-v, xen server community, xen server citrix</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F906293C-B123-B141-C098-DFDF376C0512" name="SrvSQLSrv_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:24:09 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0AB025D-E766-CD32-1745-99B138B6FF3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

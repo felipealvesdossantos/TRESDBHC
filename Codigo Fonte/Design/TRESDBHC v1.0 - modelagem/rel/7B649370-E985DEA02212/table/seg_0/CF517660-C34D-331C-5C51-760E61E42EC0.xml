@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF517660-C34D-331C-5C51-760E61E42EC0" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="Backups">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 16:57:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_19</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Backup_PK" id="820C9073-5A8A-C80A-CE0F-B558D4C018C6">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 16:58:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="agendamentos" id="F695548F-7CDF-B824-372F-1509EAC7EDAB">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 16:58:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tamanhos" id="8DA1705B-A6DF-C617-581A-A63EEDE1639F">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 16:58:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="retencao" id="9C8F22E1-071F-3FF6-A134-71AFBD3C9D87">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 16:59:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="A14A2415-0675-2CDF-7F46-D9C3D9378E26">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 17:00:39 UTC</createdTime>
+<comment>fisico incremental 0, fisico incrementao 1, fisico full, fisico archive, logico</comment>
+<commentInRDBMS>fisico incremental 0, fisico incrementao 1, fisico full, fisico archive, logico</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>fisico incremental 0, fisico incrementao 1, fisico full, fisico archive, logico</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="013D71D6-B8D7-6D05-A56C-622E7F773876" name="Backups_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-16 16:58:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="820C9073-5A8A-C80A-CE0F-B558D4C018C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

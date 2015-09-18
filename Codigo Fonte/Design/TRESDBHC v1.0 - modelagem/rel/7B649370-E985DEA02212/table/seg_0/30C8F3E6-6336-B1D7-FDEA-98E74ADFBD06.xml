@@ -1,0 +1,262 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30C8F3E6-6336-B1D7-FDEA-98E74ADFBD06" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="IndicadoresInstanciaOracle">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:24:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_21</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IndicadoresInstanciaOracle_PK" id="46797DDB-2678-DAA3-755D-3365A4E88FB7">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:25:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data" id="DE77D9B8-3417-52C2-A282-EE057A2B64F7">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:27:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="libraryCacheHit" id="FB47CE74-9B4A-D99D-3057-ADBC195D2080">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:27:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dictCacheHit" id="22B87DF4-83E8-A405-4887-073D90A65C3A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:28:09 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bufferCacheHit" id="B5A8D3AD-E576-23FD-E3A6-ADDA96C0021A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:28:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="redoLogHit" id="1477358D-800F-C98C-1B68-B6ADA44BA1BA">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:28:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sortAreaHit" id="2467CB28-D755-E9FB-071B-BB91468E510B">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:29:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="espacoArchivePct" id="6DBD1A2F-B309-314E-B2C0-BEC594F7F190">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:29:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fsMaisUsadoPct" id="77BC6F75-9020-9AFE-64AC-99CDE756C0B7">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeFsMaisUsado" id="59541DAC-56DC-6B5B-3393-A2B44796C6F7">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:30:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="errosAlert" id="A3629172-74CE-146B-DD81-A86876420602">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:30:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="volumetriaTrace" id="9A0F1096-1E5D-82CA-19A1-D55495D6A442">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:31:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="swapUsadoPct" id="80E0DEFD-9A1D-4EC6-FD07-245A536AF6FD">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:31:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="statusAgentEm" id="A3FFCD0E-CC40-5B7D-2F07-981AAF4B3605">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:31:53 UTC</createdTime>
+<comment>0 - inativo, 1 - ativo</comment>
+<commentInRDBMS>0 - inativo, 1 - ativo</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>0 - inativo, 1 - ativo</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tempoAtividadeInstancia" id="68633A72-407C-00E8-34D5-1BC774F79F0D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:33:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="InstanciaOracle_FK" id="A76D347E-745A-23A4-2CD2-B98C500D1D3D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:36:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8EE1C818-64AD-6652-5707-FD9BA25E53D3" referredColumn="C14B81B4-9F24-D7B3-28CA-618ECDA013A6"/>
+</associations>
+</Column>
+<Column name="ParecerOracle_FK" id="646C7A36-7D2A-D295-53AF-A71F18C13895">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:48:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1250302B-5860-2689-BA43-EC5D991949A6" referredColumn="274DCF5E-0899-921A-F305-E5D77F270643"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="66009914-9341-BB9A-A13C-4E0E16F989E4" name="IndicInstOracle_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:25:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46797DDB-2678-DAA3-755D-3365A4E88FB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B04ECF03-3DEF-EA06-143F-4D78D8F3F55A" name="IndicInstOracle_InstOracle_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:37:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A76D347E-745A-23A4-2CD2-B98C500D1D3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF32775B-5C59-6287-E425-2C9E6C82A533" name="IndicInstOracle_ParOracle_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 01:49:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="646C7A36-7D2A-D295-53AF-A71F18C13895"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

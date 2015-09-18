@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E13F41D0-6957-BC7D-8948-6A06BBF3EBD5" containerWithKeyObject="035A371F-32EE-B95D-B06B-C0A44227865C" localFKIndex="4E25FD85-713C-9F7D-CC19-68C2F80FD049" name="BdMonitorTicket_CliCont_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:39:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>B19F5DA4-A24C-C97A-B864-518AEE88074B</referredTableID>
+<keyObject>262F2D66-3D1B-C195-A89B-348654173CD1</keyObject>
+<referredKeyID>262F2D66-3D1B-C195-A89B-348654173CD1</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

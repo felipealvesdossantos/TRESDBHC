@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="16D8D208-6296-FF9A-8D43-3486F18A590A" mainViewID="89AFB705-50A6-5DE2-0E4E-72CA8CCA6DF8">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:47:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

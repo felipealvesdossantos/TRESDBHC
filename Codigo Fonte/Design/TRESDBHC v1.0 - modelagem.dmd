@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelagemDM - DBHC-v.01" id="1D3B4589-9035-40BA-67F7-20989598F07C" version="3.5">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:47:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>1D3B4589-9035-40BA-67F7-20989598F07C</designId>
+</OSDM_Design>

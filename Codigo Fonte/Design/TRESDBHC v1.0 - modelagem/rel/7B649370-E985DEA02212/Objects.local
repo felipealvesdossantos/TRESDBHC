@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="SchemaObject" objectID="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="tresdbhc" seqName="seg_0"/>
+   <object objectType="Table" objectID="CF517660-C34D-331C-5C51-760E61E42EC0" name="Backups" seqName="seg_0"/>
+   <object objectType="Table" objectID="035A371F-32EE-B95D-B06B-C0A44227865C" name="BancoMonitoradoTicket" seqName="seg_0"/>
+   <object objectType="Table" objectID="78384A15-304D-246E-A49F-0DAF18DA6DD5" name="BancosInstanciaSQLServer" seqName="seg_0"/>
+   <object objectType="Table" objectID="B19F5DA4-A24C-C97A-B864-518AEE88074B" name="ClienteContrato" seqName="seg_0"/>
+   <object objectType="Table" objectID="27CB09E9-0302-C99D-EF4F-10A1394B7586" name="Colaborador" seqName="seg_0"/>
+   <object objectType="Table" objectID="9FED6D0F-61D8-8EEC-83AC-268B9EACE42F" name="ContatoCliente" seqName="seg_0"/>
+   <object objectType="Table" objectID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" name="DBOracle" seqName="seg_0"/>
+   <object objectType="Table" objectID="E4814983-D145-E348-1F05-D0661B7896B4" name="IndicadoresBancosSQLServer" seqName="seg_0"/>
+   <object objectType="Table" objectID="8775CBDD-6C9B-2B20-1C69-C08DA0C71CC3" name="IndicadoresDBOracle" seqName="seg_0"/>
+   <object objectType="Table" objectID="751EC92C-90D7-B6F7-8E04-F2CFCE110869" name="IndicadoresDisasterRecover" seqName="seg_0"/>
+   <object objectType="Table" objectID="30C8F3E6-6336-B1D7-FDEA-98E74ADFBD06" name="IndicadoresInstanciaOracle" seqName="seg_0"/>
+   <object objectType="Table" objectID="A0818E3F-077C-8DE5-9246-46D4C34F46E2" name="IndicadoresInstanciaSQLServer" seqName="seg_0"/>
+   <object objectType="Table" objectID="2FFCDA5D-33D7-410B-36F8-E0D99A99A3F0" name="InstanciaOracle" seqName="seg_0"/>
+   <object objectType="Table" objectID="65F1C694-B89C-179C-3189-624DB0A4518C" name="InstanciaSQLServer" seqName="seg_0"/>
+   <object objectType="Table" objectID="1421DDA8-4DFE-5263-A61F-A58EC7013658" name="ParecerOracle" seqName="seg_0"/>
+   <object objectType="Table" objectID="0CEF9354-EDD0-A3E4-EA0F-AB406C6782E6" name="ParecerSQLServer" seqName="seg_0"/>
+   <object objectType="Table" objectID="EFA7F990-C851-22B1-EDE9-3DB4A234046F" name="ServidorOracle" seqName="seg_0"/>
+   <object objectType="Table" objectID="33ED4735-AB88-D097-AA26-FEB5F06A5780" name="ServidorRdbms" seqName="seg_0"/>
+   <object objectType="Table" objectID="85896A88-F0D5-3056-9980-4DB8DA3ED84A" name="TarefasAdministrativas" seqName="seg_0"/>
+   <object objectType="Table" objectID="AC87AAE4-6CA5-738B-5635-185B23B50AC8" name="TicketTecnico" seqName="seg_0"/>
+   <object objectType="View" objectID="DC7E8B0B-796F-FD48-AAD7-444153D0584E" name="ViewColaborador" seqName="seg_0"/>
+   <object objectType="View" objectID="19D95003-94F5-1303-D784-DC93319EB0B8" name="ViewNomeCliente" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="CB3DAC38-4144-C56E-45D4-92F5775069FD" name="BdInstSQLSrv_InstSQLSrv_FK" seqName="seg_0" containerID="78384A15-304D-246E-A49F-0DAF18DA6DD5" refContainerID="65F1C694-B89C-179C-3189-624DB0A4518C"/>
+   <object objectType="FKIndexAssociation" objectID="E13F41D0-6957-BC7D-8948-6A06BBF3EBD5" name="BdMonitorTicket_CliCont_FK" seqName="seg_0" containerID="035A371F-32EE-B95D-B06B-C0A44227865C" refContainerID="B19F5DA4-A24C-C97A-B864-518AEE88074B"/>
+   <object objectType="FKIndexAssociation" objectID="0939C19E-C194-B054-BB7D-6C4B6FB6AB5C" name="ContCli_CliContrato_FK" seqName="seg_0" containerID="9FED6D0F-61D8-8EEC-83AC-268B9EACE42F" refContainerID="B19F5DA4-A24C-C97A-B864-518AEE88074B"/>
+   <object objectType="FKIndexAssociation" objectID="5F06FCB1-DC2A-FB2B-7801-8512DE97CB1B" name="DBOracle_BdMonitTicket_FK" seqName="seg_0" containerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" refContainerID="035A371F-32EE-B95D-B06B-C0A44227865C"/>
+   <object objectType="FKIndexAssociation" objectID="F6D219B6-E358-B6AC-2239-42F3BD446637" name="DBOracle_Colab_FK1" seqName="seg_0" containerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="8C264B73-BB9D-2022-620D-C2779F0E8C09" name="DBOracle_Colab_FK2" seqName="seg_0" containerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="E67F9E34-15D3-0244-6FB6-0ADE23D349B6" name="Gerente_Colab_FK" seqName="seg_0" containerID="27CB09E9-0302-C99D-EF4F-10A1394B7586" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="71DB2925-9F2E-E8F1-0CA0-FEC015481C00" name="IndBdSQLSrv_BdInstSQLSrv_FK" seqName="seg_0" containerID="E4814983-D145-E348-1F05-D0661B7896B4" refContainerID="78384A15-304D-246E-A49F-0DAF18DA6DD5"/>
+   <object objectType="FKIndexAssociation" objectID="B8587C86-4FB9-D1A2-5247-E80AEB8D37FE" name="IndicBdSQLSrv_InstSQLSrv_FK" seqName="seg_0" containerID="E4814983-D145-E348-1F05-D0661B7896B4" refContainerID="65F1C694-B89C-179C-3189-624DB0A4518C"/>
+   <object objectType="FKIndexAssociation" objectID="7EA717B2-CA8D-D663-DC4D-CEE9069D1807" name="IndicBdSQLSrv_ParSQLSrv_FK" seqName="seg_0" containerID="E4814983-D145-E348-1F05-D0661B7896B4" refContainerID="0CEF9354-EDD0-A3E4-EA0F-AB406C6782E6"/>
+   <object objectType="FKIndexAssociation" objectID="2C9BB69D-B957-6B4F-B06F-E0754B16829A" name="IndicDBOracle_DBOracle_FK" seqName="seg_0" containerID="8775CBDD-6C9B-2B20-1C69-C08DA0C71CC3" refContainerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69"/>
+   <object objectType="FKIndexAssociation" objectID="950DA1A0-CF05-48B5-0C25-2DB04C396ED4" name="IndicDBOracle_ParOracle_FK" seqName="seg_0" containerID="8775CBDD-6C9B-2B20-1C69-C08DA0C71CC3" refContainerID="1421DDA8-4DFE-5263-A61F-A58EC7013658"/>
+   <object objectType="FKIndexAssociation" objectID="FE0C7B4B-8D8D-BDE8-CD1F-C93BE6785495" name="IndicDr_DBOracle_FK" seqName="seg_0" containerID="751EC92C-90D7-B6F7-8E04-F2CFCE110869" refContainerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69"/>
+   <object objectType="FKIndexAssociation" objectID="7CCD4F62-0D9B-8C1A-9FC5-18B035C40806" name="IndicDr_ParOracle_FK" seqName="seg_0" containerID="751EC92C-90D7-B6F7-8E04-F2CFCE110869" refContainerID="1421DDA8-4DFE-5263-A61F-A58EC7013658"/>
+   <object objectType="FKIndexAssociation" objectID="8EE1C818-64AD-6652-5707-FD9BA25E53D3" name="IndicInstOracle_InstOracle_FK" seqName="seg_0" containerID="30C8F3E6-6336-B1D7-FDEA-98E74ADFBD06" refContainerID="2FFCDA5D-33D7-410B-36F8-E0D99A99A3F0"/>
+   <object objectType="FKIndexAssociation" objectID="1250302B-5860-2689-BA43-EC5D991949A6" name="IndicInstOracle_ParOracle_FK" seqName="seg_0" containerID="30C8F3E6-6336-B1D7-FDEA-98E74ADFBD06" refContainerID="1421DDA8-4DFE-5263-A61F-A58EC7013658"/>
+   <object objectType="FKIndexAssociation" objectID="6DD7B72E-A248-36AD-8408-CA74EE39E501" name="InsdInstSQLSrv_InstSQLSrv_FK" seqName="seg_0" containerID="A0818E3F-077C-8DE5-9246-46D4C34F46E2" refContainerID="65F1C694-B89C-179C-3189-624DB0A4518C"/>
+   <object objectType="FKIndexAssociation" objectID="1B7A70C1-4692-C4F9-1DB7-5A5F13FA72A8" name="InsdicInstSQLSrv_ParSQLSrv_FK" seqName="seg_0" containerID="A0818E3F-077C-8DE5-9246-46D4C34F46E2" refContainerID="0CEF9354-EDD0-A3E4-EA0F-AB406C6782E6"/>
+   <object objectType="FKIndexAssociation" objectID="AD3D9955-99D4-F989-7A99-49AC68E3CE6A" name="InstOracle_DBOracle_FK" seqName="seg_0" containerID="2FFCDA5D-33D7-410B-36F8-E0D99A99A3F0" refContainerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69"/>
+   <object objectType="FKIndexAssociation" objectID="668EE740-B18A-5227-26D5-DAF602041681" name="InstOracle_SrvOracle_FK" seqName="seg_0" containerID="2FFCDA5D-33D7-410B-36F8-E0D99A99A3F0" refContainerID="EFA7F990-C851-22B1-EDE9-3DB4A234046F"/>
+   <object objectType="FKIndexAssociation" objectID="FED56BAD-B3FC-1A6B-DB38-A63D7F5F07B0" name="InstOracle_SrvRdbms_FK" seqName="seg_0" containerID="2FFCDA5D-33D7-410B-36F8-E0D99A99A3F0" refContainerID="33ED4735-AB88-D097-AA26-FEB5F06A5780"/>
+   <object objectType="FKIndexAssociation" objectID="240BE25E-51C8-955F-13FD-7A9382F1AABA" name="InstSQLSrv_BdMonitTicket_FK" seqName="seg_0" containerID="65F1C694-B89C-179C-3189-624DB0A4518C" refContainerID="035A371F-32EE-B95D-B06B-C0A44227865C"/>
+   <object objectType="FKIndexAssociation" objectID="4234A6CC-4684-1C11-EC77-23AE5F638A0F" name="InstSQLSrv_ColabAnalise_FK" seqName="seg_0" containerID="65F1C694-B89C-179C-3189-624DB0A4518C" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="F6FDCA65-9168-9E79-9039-2E75A84AE506" name="InstSQLSrv_ColabPreAnalise_FK" seqName="seg_0" containerID="65F1C694-B89C-179C-3189-624DB0A4518C" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="81533F98-F35B-576A-F23D-DDC575EE394F" name="InstSQLSrv_SrvRdbms_FK" seqName="seg_0" containerID="65F1C694-B89C-179C-3189-624DB0A4518C" refContainerID="33ED4735-AB88-D097-AA26-FEB5F06A5780"/>
+   <object objectType="FKIndexAssociation" objectID="60D6AE47-DAB4-B53A-3377-0C59E4135005" name="ParOracle_ColabAnalise_FK" seqName="seg_0" containerID="1421DDA8-4DFE-5263-A61F-A58EC7013658" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="52DA8863-E473-0938-7234-70BE7C11918B" name="ParOracle_ColabPreAnalise_FK" seqName="seg_0" containerID="1421DDA8-4DFE-5263-A61F-A58EC7013658" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="88D329A4-DE79-5278-9EC1-86D411967058" name="ParSQLSrv_ColabAnalise_FK" seqName="seg_0" containerID="0CEF9354-EDD0-A3E4-EA0F-AB406C6782E6" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="FC47C0D6-EAAA-1D7C-52DC-75DFE7AB44DF" name="ParSQLSrvr_ColabPreAnalise_FK" seqName="seg_0" containerID="0CEF9354-EDD0-A3E4-EA0F-AB406C6782E6" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="91059D97-7DAE-FEE9-2F08-02F13FF7708E" name="TarefasAdm_Colab_FK" seqName="seg_0" containerID="85896A88-F0D5-3056-9980-4DB8DA3ED84A" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

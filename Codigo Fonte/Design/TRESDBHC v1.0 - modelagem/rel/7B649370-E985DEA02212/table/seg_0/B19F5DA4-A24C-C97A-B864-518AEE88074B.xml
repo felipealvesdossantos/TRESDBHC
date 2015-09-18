@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B19F5DA4-A24C-C97A-B864-518AEE88074B" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ClienteContrato">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:49:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsEnable>true</ordsEnable>
+<ordsAlias>table_2</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ClienteContrato_PK" id="03A0C278-AEDD-BE5F-4E55-BEAC2F92C090">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:55:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<sourceType>Manual</sourceType>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeCliente" id="EA95558D-B83A-0F30-AAB9-1E08497A513A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:54:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apelidoCliente" id="CAE2A073-224E-0C63-9279-90F25DCF5493">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-13 23:50:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoContrato" id="246FD422-80DC-774E-2655-5EDEFDB31E71">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:54:53 UTC</createdTime>
+<comment>mensal, avulso, suspenso, cancelado, treinamento, parceria</comment>
+<commentInRDBMS>mensal, avulso, suspenso, cancelado, treinamento, parceria&lt;br/&gt;</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>mensal, avulso, suspenso, cancelado, treinamento, parceria</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modalidade" id="6F9D6389-62C8-588D-95E0-B5A4DC627E42">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:54:53 UTC</createdTime>
+<comment>modelo franquia horas, modelo frequencia variável, modelo frequencia fixo</comment>
+<commentInRDBMS>modelo franquia horas, modelo frequencia variável, modelo frequencia fixo&lt;br/&gt;</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<notes>modelo franquia horas, modelo frequencia variável, modelo frequencia fixo</notes>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="diaFaturamento" id="953824C1-8B5C-F648-2A7C-6C2D48DEE434">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:54:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="diaVencimento" id="E65B3466-B176-415E-DEE0-DCDE13530223">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:11:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigoSuperCash" id="E9519F3B-A52B-B15D-D017-73261E06739A">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:12:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cnpj" id="0F2B66CB-A670-03CE-55BC-6659433E6EE9">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:13:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="endereco" id="B74F9A2B-3CBC-86F0-94C0-E02B5B20FA6E">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:13:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cep" id="BF075115-6FE0-7C0F-EE8F-BD8ABB3B3DC4">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 16:45:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cidade" id="DDE7D845-5A25-340A-E5B2-C88DD9293284">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 16:45:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="58B9CE0D-7147-7EFF-5C07-3C3176EE571D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 16:46:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dataVencimentoCAC" id="66BF5EB3-D77B-AD8A-96C7-AC0CAF1E05E5">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 19:14:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="262F2D66-3D1B-C195-A89B-348654173CD1" name="CliCont_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-11 18:56:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03A0C278-AEDD-BE5F-4E55-BEAC2F92C090"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB914934-6029-7BE7-ACF9-2728698E1B30" name="CliContApelidoCli_UN">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-13 23:53:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAE2A073-224E-0C63-9279-90F25DCF5493"/>
+<colUsage columnID="EA95558D-B83A-0F30-AAB9-1E08497A513A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="78384A15-304D-246E-A49F-0DAF18DA6DD5" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="BancosInstanciaSQLServer">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:42:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ordsAlias>table_33</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BancosInstanciaSQLServer_PK" id="50832C96-A430-4958-B891-59901C13925F">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:42:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeBanco" id="9047B583-C62C-1544-FEA1-1487D0EB7A04">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:43:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="InstanciaSQLServer_FK" id="14F9792F-084F-A9C6-1FE7-3B69987AED0B">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:45:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB3DAC38-4144-C56E-45D4-92F5775069FD" referredColumn="A9B79B49-26BD-29F6-88A0-6884C7544F7A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14806B83-4B49-A82B-86FE-7F60DDFFA5DC" name="BdInstSQLSrv_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:42:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50832C96-A430-4958-B891-59901C13925F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FB69402B-E83C-12C4-56FC-2D7B64CA6090" name="BdInstSQLSrv_InstSQLSrv_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-12 03:46:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14F9792F-084F-A9C6-1FE7-3B69987AED0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
