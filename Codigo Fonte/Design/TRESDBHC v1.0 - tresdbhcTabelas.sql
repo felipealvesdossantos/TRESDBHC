@@ -374,7 +374,7 @@ DELETE CASCADE ;
 ALTER TABLE tresdbhc.ParecerSQLServer ADD CONSTRAINT ParSQLSrvr_ColabPreAnalise_FK FOREIGN KEY ( ColaboradorPreAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
 DELETE CASCADE ;
 
---14 sequence para chave primaria ParecerSQLServer
+-- sequence para chave primaria ParecerSQLServer
 CREATE SEQUENCE tresdbhc.parSQLSrv_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
@@ -436,7 +436,34 @@ DELETE CASCADE ;
 CREATE SEQUENCE tresdbhc.indicInstSQLSrv_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---15
+--17
+CREATE TABLE tresdbhc.acessos
+  (
+    Acessos_PK NUMBER NOT NULL ,
+    permissoes VARCHAR2 (100 CHAR)
+  ) ;
+ALTER TABLE Acessos ADD CONSTRAINT Acessos_PK PRIMARY KEY ( Acessos_PK ) ;
+
+-- sequence para chave primaria IndicadoresInstanciaSQLServer
+CREATE SEQUENCE tresdbhc.acessos_seq START WITH 1 NOCACHE ORDER ;
+
+----------------------------------------------------------------------------
+--18
+CREATE TABLE tresdbhc.ControleAcesso
+  (
+    ControleAcesso_PK NUMBER NOT NULL ,
+    Colaborador_FK    NUMBER NOT NULL ,
+    Acessos_FK        NUMBER NOT NULL
+  ) ;
+ALTER TABLE tresdbhc.ControleAcesso ADD CONSTRAINT ControleAcesso_PK PRIMARY KEY ( ControleAcesso_PK ) ;
+ALTER TABLE tresdbhc.ControleAcesso ADD CONSTRAINT ControleAcesso_Acessos_FK FOREIGN KEY ( Acessos_FK ) REFERENCES tresdbhc.Acessos ( Acessos_PK ) ;
+ALTER TABLE tresdbhc.ControleAcesso ADD CONSTRAINT ControleAcesso_Colab_FK FOREIGN KEY ( Colaborador_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ;
+
+-- sequence para chave primaria IndicadoresInstanciaSQLServer
+CREATE SEQUENCE tresdbhc.controleAcesso_seq START WITH 1 NOCACHE ORDER ;
+
+----------------------------------------------------------------------------
+--19
 CREATE TABLE tresdbhc.itensEnviados 
    (
     ItensEnviados_PK NUMBER NOT NULL ,

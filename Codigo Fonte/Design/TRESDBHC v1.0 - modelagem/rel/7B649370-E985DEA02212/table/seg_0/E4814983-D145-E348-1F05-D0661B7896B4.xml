@@ -213,6 +213,14 @@
 <colUsage columnID="979B98FC-E519-C840-36B9-F5B45C5EE852"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="5BAA31C3-66E2-8B27-8F9D-1CC6F02108B4" name="IndBdSQLSrv_BdInstSQLSrv_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-17 12:36:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
 <ind_PK_UK id="7FE63605-61AE-506F-89F1-325AF59A7D4F" name="IndicBdSQLSrv_ParSQLSrv_FK">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 04:13:39 UTC</createdTime>
@@ -235,11 +243,11 @@
 <colUsage columnID="189ED31C-C6B9-3615-D879-46E1005FEAC6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5BAA31C3-66E2-8B27-8F9D-1CC6F02108B4" name="IndBdSQLSrv_BdInstSQLSrv_FK">
+<ind_PK_UK id="3B418250-3BE0-CBB9-1349-49286CC4967B" name="IndBdSQLSrv_BdInstSQLSrv_FK">
 <createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-17 12:36:23 UTC</createdTime>
+<createdTime>2015-09-18 18:58:44 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
-<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 </ind_PK_UK>

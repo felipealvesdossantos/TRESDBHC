@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06FB7360-2557-1FF4-7416-5038FF018899" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="ControleAcesso">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:51:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<ordsAlias>table_21</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ControleAcesso_PK" id="C5BD5410-C6DE-36B7-55DE-7206BB0700BB">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:52:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Colaborador_FK" id="DC97CF3D-0008-4624-7444-DE3608FC8A7D">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:52:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="45B173BC-5C22-C2AE-DF44-2FBEF794B02C" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+<Column name="Acessos_FK" id="C3F033FB-A707-87AC-B895-C00C638DC2D5">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:52:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AA8D004E-6359-056D-46DA-C2F32A2BD705" referredColumn="2D3045D0-7268-1D17-BD79-DBBCBA7AD2DC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6AB94587-AA9E-20E9-F500-FA2C937433FB" name="ControleAcesso_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:53:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5BD5410-C6DE-36B7-55DE-7206BB0700BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37CE6860-FBEC-11B8-EC5D-507E2AE80B7D" name="ControleAcesso_Colab_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:53:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC97CF3D-0008-4624-7444-DE3608FC8A7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B796343-829D-134D-94A2-975FCEABC88E" name="ControleAcesso_Acessos_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-18 19:57:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3F033FB-A707-87AC-B895-C00C638DC2D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

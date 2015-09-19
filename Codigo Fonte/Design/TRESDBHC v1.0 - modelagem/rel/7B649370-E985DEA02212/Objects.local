@@ -1,12 +1,14 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.relational.RelationalDesign>
    <object objectType="SchemaObject" objectID="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="tresdbhc" seqName="seg_0"/>
+   <object objectType="Table" objectID="1F6A8621-C4CA-2DA8-9E44-E0EB363A2041" name="Acessos" seqName="seg_0"/>
    <object objectType="Table" objectID="CF517660-C34D-331C-5C51-760E61E42EC0" name="Backups" seqName="seg_0"/>
    <object objectType="Table" objectID="035A371F-32EE-B95D-B06B-C0A44227865C" name="BancoMonitoradoTicket" seqName="seg_0"/>
    <object objectType="Table" objectID="78384A15-304D-246E-A49F-0DAF18DA6DD5" name="BancosInstanciaSQLServer" seqName="seg_0"/>
    <object objectType="Table" objectID="B19F5DA4-A24C-C97A-B864-518AEE88074B" name="ClienteContrato" seqName="seg_0"/>
    <object objectType="Table" objectID="27CB09E9-0302-C99D-EF4F-10A1394B7586" name="Colaborador" seqName="seg_0"/>
    <object objectType="Table" objectID="9FED6D0F-61D8-8EEC-83AC-268B9EACE42F" name="ContatoCliente" seqName="seg_0"/>
+   <object objectType="Table" objectID="06FB7360-2557-1FF4-7416-5038FF018899" name="ControleAcesso" seqName="seg_0"/>
    <object objectType="Table" objectID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" name="DBOracle" seqName="seg_0"/>
    <object objectType="Table" objectID="E4814983-D145-E348-1F05-D0661B7896B4" name="IndicadoresBancosSQLServer" seqName="seg_0"/>
    <object objectType="Table" objectID="8775CBDD-6C9B-2B20-1C69-C08DA0C71CC3" name="IndicadoresDBOracle" seqName="seg_0"/>
@@ -26,9 +28,11 @@
    <object objectType="FKIndexAssociation" objectID="CB3DAC38-4144-C56E-45D4-92F5775069FD" name="BdInstSQLSrv_InstSQLSrv_FK" seqName="seg_0" containerID="78384A15-304D-246E-A49F-0DAF18DA6DD5" refContainerID="65F1C694-B89C-179C-3189-624DB0A4518C"/>
    <object objectType="FKIndexAssociation" objectID="E13F41D0-6957-BC7D-8948-6A06BBF3EBD5" name="BdMonitorTicket_CliCont_FK" seqName="seg_0" containerID="035A371F-32EE-B95D-B06B-C0A44227865C" refContainerID="B19F5DA4-A24C-C97A-B864-518AEE88074B"/>
    <object objectType="FKIndexAssociation" objectID="0939C19E-C194-B054-BB7D-6C4B6FB6AB5C" name="ContCli_CliContrato_FK" seqName="seg_0" containerID="9FED6D0F-61D8-8EEC-83AC-268B9EACE42F" refContainerID="B19F5DA4-A24C-C97A-B864-518AEE88074B"/>
+   <object objectType="FKIndexAssociation" objectID="45B173BC-5C22-C2AE-DF44-2FBEF794B02C" name="ControleAcesso_Colab_FK" seqName="seg_0" containerID="06FB7360-2557-1FF4-7416-5038FF018899" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
    <object objectType="FKIndexAssociation" objectID="5F06FCB1-DC2A-FB2B-7801-8512DE97CB1B" name="DBOracle_BdMonitTicket_FK" seqName="seg_0" containerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" refContainerID="035A371F-32EE-B95D-B06B-C0A44227865C"/>
    <object objectType="FKIndexAssociation" objectID="F6D219B6-E358-B6AC-2239-42F3BD446637" name="DBOracle_Colab_FK1" seqName="seg_0" containerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
    <object objectType="FKIndexAssociation" objectID="8C264B73-BB9D-2022-620D-C2779F0E8C09" name="DBOracle_Colab_FK2" seqName="seg_0" containerID="3764052D-8232-EEA4-3EC1-5BB0A2093B69" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
+   <object objectType="FKIndexAssociation" objectID="AA8D004E-6359-056D-46DA-C2F32A2BD705" name="ControleAcesso_Acessos_FK" seqName="seg_0" containerID="06FB7360-2557-1FF4-7416-5038FF018899" refContainerID="1F6A8621-C4CA-2DA8-9E44-E0EB363A2041"/>
    <object objectType="FKIndexAssociation" objectID="E67F9E34-15D3-0244-6FB6-0ADE23D349B6" name="Gerente_Colab_FK" seqName="seg_0" containerID="27CB09E9-0302-C99D-EF4F-10A1394B7586" refContainerID="27CB09E9-0302-C99D-EF4F-10A1394B7586"/>
    <object objectType="FKIndexAssociation" objectID="71DB2925-9F2E-E8F1-0CA0-FEC015481C00" name="IndBdSQLSrv_BdInstSQLSrv_FK" seqName="seg_0" containerID="E4814983-D145-E348-1F05-D0661B7896B4" refContainerID="78384A15-304D-246E-A49F-0DAF18DA6DD5"/>
    <object objectType="FKIndexAssociation" objectID="B8587C86-4FB9-D1A2-5247-E80AEB8D37FE" name="IndicBdSQLSrv_InstSQLSrv_FK" seqName="seg_0" containerID="E4814983-D145-E348-1F05-D0661B7896B4" refContainerID="65F1C694-B89C-179C-3189-624DB0A4518C"/>
