@@ -49,7 +49,10 @@
 <Column name="logMode" id="6FAA4FCB-6988-B258-420A-D40BC4E28DA2">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 01:17:18 UTC</createdTime>
+<comment>archivelog, noarchivelog</comment>
+<commentInRDBMS>archivelog, noarchivelog</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
+<notes>archivelog, noarchivelog</notes>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>

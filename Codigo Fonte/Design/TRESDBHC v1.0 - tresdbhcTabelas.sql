@@ -4,12 +4,12 @@
 --   tipo:      Oracle Database 11g
 
 -- criação de tablespace para o sistema tresdbhc
-DROP TABLESPACE tresdbhc_dados INCLUDING CONTENTS;
-DROP TABLESPACE tresdbhc_indx INCLUDING CONTENTS;
-CREATE TABLESPACE tresdbhc_dados DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_dados01.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
-ALTER TABLESPACE tresdbhc_dados ADD DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_dados02.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
-CREATE TABLESPACE tresdbhc_indx DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_indx01.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
-ALTER TABLESPACE tresdbhc_indx ADD DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_indx02.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
+--DROP TABLESPACE tresdbhc_dados INCLUDING CONTENTS;
+--DROP TABLESPACE tresdbhc_indx INCLUDING CONTENTS;
+--CREATE TABLESPACE tresdbhc_dados DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_dados01.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
+--ALTER TABLESPACE tresdbhc_dados ADD DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_dados02.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
+--CREATE TABLESPACE tresdbhc_indx DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_indx01.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
+--ALTER TABLESPACE tresdbhc_indx ADD DATAFILE '$ORACLE_BASE/oradata/$ORACLE_SID/tresdbhc_indx02.dbf' SIZE 1000M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
 
 --#####################################################################################################
 
@@ -19,6 +19,8 @@ CREATE USER tresdbhc IDENTIFIED BY tresdbhc DEFAULT TABLESPACE tresdbhc_dados;
 ALTER USER tresdbhc QUOTA UNLIMITED ON tresdbhc_dados;
 ALTER USER tresdbhc QUOTA UNLIMITED ON tresdbhc_indx;
 GRANT connect, resource TO tresdbhc;
+GRANT select on APEX_050000.apex_application_pages to tresdbhc;
+GRANT create view to tresdbhc;
 conn tresdbhc/tresdbhc;
 
 --#####################################################################################################
@@ -31,16 +33,17 @@ CREATE TABLE tresdbhc.ClienteContrato
     ClienteContrato_PK NUMBER NOT NULL ,
     nomeCliente        VARCHAR2 (500 CHAR) NOT NULL ,
     apelidoCliente     VARCHAR2 (50 CHAR) NOT NULL ,
+    telefone           VARCHAR2 (20 CHAR) NOT NULL ,
     tipoContrato       VARCHAR2 (20 CHAR) NOT NULL ,
     modalidade         VARCHAR2 (100 CHAR) NOT NULL ,
     diaFaturamento     NUMBER NOT NULL ,
     diaVencimento      NUMBER NOT NULL ,
     codigoSuperCash    VARCHAR2 (100 CHAR) NOT NULL ,
     cnpj               VARCHAR2 (20 CHAR) NOT NULL ,
-    endereco           VARCHAR2 (2000 CHAR) ,
-    cep                VARCHAR2 (50 CHAR) ,
-    cidade             VARCHAR2 (100 CHAR) ,
-    estado             VARCHAR2 (20 CHAR) ,
+    endereco           VARCHAR2 (300 CHAR) NOT NULL ,
+    cep                VARCHAR2 (20 CHAR) NOT NULL ,
+    cidade             VARCHAR2 (50 CHAR) NOT NULL ,
+    estado             VARCHAR2 (30 CHAR) NOT NULL ,
     dataVencimentoCAC  DATE
   ) ;
 COMMENT ON COLUMN tresdbhc.ClienteContrato.tipoContrato
@@ -51,6 +54,8 @@ IS
 IS
   'modelo franquia horas, modelo frequencia variável, modelo frequencia fixo
 ' ;
+  ALTER TABLE tresdbhc.ClienteContrato ADD CONSTRAINT diaVencimento_CK_1 CHECK (diaVencimento BETWEEN 1 AND 31) ;
+  ALTER TABLE tresdbhc.ClienteContrato ADD CONSTRAINT diaFaturamento_CK_2 CHECK (diaFaturamento BETWEEN 1 AND 31) ;
   ALTER TABLE tresdbhc.ClienteContrato ADD CONSTRAINT CliCont_PK PRIMARY KEY ( ClienteContrato_PK ) ;
   ALTER TABLE tresdbhc.ClienteContrato ADD CONSTRAINT CliContApelidoCli_UN UNIQUE ( apelidoCliente , nomeCliente ) ;
 
@@ -65,6 +70,7 @@ CREATE TABLE tresdbhc.ContatoCliente
     nomeContato          VARCHAR2 (100 CHAR) NOT NULL ,
     funcao               VARCHAR2 (50 CHAR) ,
     telefone             VARCHAR2 (100 CHAR) ,
+    celular              VARCHAR2 (20 CHAR) ,
     email                VARCHAR2 (50 CHAR) NOT NULL ,
     departamento         VARCHAR2 (50 CHAR) ,
     ClienteContratoId_FK NUMBER NOT NULL
@@ -85,34 +91,56 @@ CREATE TABLE tresdbhc.Colaborador
     funcao         VARCHAR2 (50 CHAR) NOT NULL ,
     telefone       VARCHAR2 (30 CHAR) ,
     celular        VARCHAR2 (30 CHAR) ,
-    endereco       VARCHAR2 (2000 CHAR) ,
-    email          VARCHAR2 (100 CHAR) ,
-    ativo          NUMBER ,
-    GerenteId_FK   NUMBER
+    endereco CLOB ,
+    email           VARCHAR2 (100 CHAR) ,
+    ativo           VARCHAR2 (10 CHAR) ,
+    GerenteId_FK    NUMBER ,
+    Departamento_FK NUMBER
   ) ;
-COMMENT ON COLUMN tresdbhc.Colaborador.ativo
+COMMENT ON COLUMN tresdbhc.Colaborador.funcao
 IS
-  '0 - inativo, 1 - ativo' ;
+  'dba, coordenador, diretor, estagiario, vendedor, assistente administrativo, secretaria' ;
+  COMMENT ON COLUMN tresdbhc.Colaborador.ativo
+IS
+  ' inativo, ativo' ;
   ALTER TABLE tresdbhc.Colaborador ADD CONSTRAINT Colab_PK PRIMARY KEY ( Colaborador_PK ) ;
-  ALTER TABLE tresdbhc.Colaborador ADD CONSTRAINT Gerente_Colab_FK FOREIGN KEY ( GerenteId_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ;
+  ALTER TABLE tresdbhc.Colaborador ADD CONSTRAINT Gerente_Colab_FK FOREIGN KEY ( GerenteId_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
+  DELETE CASCADE ;
 
 -- sequence para chave primaria Colaborador
 CREATE SEQUENCE tresdbhc.colab_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
 --4
+CREATE TABLE tresdbhc.Departamento
+  (
+    Departamento_PK NUMBER NOT NULL ,
+    nome            VARCHAR2 (50 CHAR) NOT NULL ,
+    atribuicao      VARCHAR2 (500 CHAR) ,
+    Gerente_FK      NUMBER NOT NULL
+  ) ;
+ALTER TABLE tresdbhc.Departamento ADD CONSTRAINT Departamento_PK PRIMARY KEY ( Departamento_PK ) ;
+ALTER TABLE tresdbhc.Departamento ADD CONSTRAINT Depart_Colab_FK FOREIGN KEY ( Gerente_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ;
+ALTER TABLE tresdbhc.Colaborador ADD CONSTRAINT Colab_Depart_FK FOREIGN KEY ( Departamento_FK ) REFERENCES tresdbhc.Departamento ( Departamento_PK ) ON
+  DELETE CASCADE ;
+
+-- sequence para chave primaria Colaborador
+CREATE SEQUENCE tresdbhc.depart_seq START WITH 1 NOCACHE ORDER ;
+
+----------------------------------------------------------------------------
+--5
 CREATE TABLE tresdbhc.BancoMonitoradoTicket
   (
     BancoMonitoradoTicket_PK NUMBER NOT NULL ,
     frequenciaMonitoramento  VARCHAR2 (100 CHAR) ,
     valorHoraNormal          NUMBER ,
     valorHoraExtra           NUMBER ,
-    rdbms                    VARCHAR2 (15 CHAR) ,
+    rdbms                    NUMBER ,
     ClienteContrato_FK       NUMBER NOT NULL
   ) ;
 COMMENT ON COLUMN tresdbhc.BancoMonitoradoTicket.rdbms
 IS
-  'oracle, sqlserver' ;
+  'oracle,  sqlserver' ;
   ALTER TABLE tresdbhc.BancoMonitoradoTicket ADD CONSTRAINT BdMonitTicket_PK PRIMARY KEY ( BancoMonitoradoTicket_PK ) ;
   ALTER TABLE tresdbhc.BancoMonitoradoTicket ADD CONSTRAINT BdMonitorTicket_CliCont_FK FOREIGN KEY ( ClienteContrato_FK ) REFERENCES tresdbhc.ClienteContrato ( ClienteContrato_PK ) ON
   DELETE CASCADE ;
@@ -121,7 +149,7 @@ IS
 CREATE SEQUENCE tresdbhc.bancoMonitTicket_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---5
+--6
 CREATE TABLE tresdbhc.ServidorRdbms
   (
     ServidorRdbms_PK   NUMBER NOT NULL ,
@@ -132,7 +160,7 @@ CREATE TABLE tresdbhc.ServidorRdbms
     sistemaOperacional VARCHAR2 (100 CHAR) ,
     qtdMemoriaRam      NUMBER ,
     qtdDisco           NUMBER ,
-    hypervisor         VARCHAR2 (100 CHAR)
+    hypervisor         VARCHAR2 (30 CHAR)
   ) ;
 COMMENT ON COLUMN tresdbhc.ServidorRdbms.hypervisor
 IS
@@ -143,12 +171,12 @@ IS
 CREATE SEQUENCE tresdbhc.srvRdbms_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---6
+--7
 CREATE TABLE tresdbhc.DBOracle
   (
     DBOracle_PK              NUMBER NOT NULL ,
     nomeBanco                VARCHAR2 (30 CHAR) NOT NULL ,
-    tipoBanco                VARCHAR2 (50 CHAR) NOT NULL ,
+    tipoBanco                VARCHAR2 (20 CHAR) NOT NULL ,
     ColaboradorPreAnalise_FK NUMBER NOT NULL ,
     ColaboradorAnalise_FK    NUMBER NOT NULL ,
     BancoMonitoradoTicket_FK NUMBER NOT NULL
@@ -168,7 +196,7 @@ IS
 CREATE SEQUENCE tresdbhc.dbOracle_seq START WITH 1 NOCACHE ORDER ;
   
 ----------------------------------------------------------------------------
---7
+--8
 CREATE TABLE tresdbhc.InstanciaOracle
   (
     InstanciaOracle_PK NUMBER NOT NULL ,
@@ -179,33 +207,33 @@ CREATE TABLE tresdbhc.InstanciaOracle
 ALTER TABLE tresdbhc.InstanciaOracle ADD CONSTRAINT InstOracle_PK PRIMARY KEY ( InstanciaOracle_PK ) ;
 ALTER TABLE tresdbhc.InstanciaOracle ADD CONSTRAINT InstOracle_DBOracle_FK FOREIGN KEY ( DBOracle_FK ) REFERENCES tresdbhc.DBOracle ( DBOracle_PK ) ON
 DELETE CASCADE ;
-ALTER TABLE tresdbhc.InstanciaOracle ADD CONSTRAINT InstOracle_SrvRdbms_FK FOREIGN KEY ( ServidorRdbms_FK ) REFERENCES tresdbhc.ServidorRdbms ( ServidorRdbms_PK ) ON
+ALTER TABLE tresdbhc.InstanciaOracle ADD CONSTRAINT InstOracle_SrvOracle_FK FOREIGN KEY ( ServidorRdbms_FK ) REFERENCES tresdbhc.ServidorRdbms ( ServidorRdbms_PK ) ON
 DELETE CASCADE ;
 
 -- sequence para chave primaria InstanciaOracle
 CREATE SEQUENCE tresdbhc.instOracle_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---8
-CREATE TABLE tresdbhc.ParecerOracle
+--9
+CREATE TABLE tresdbhc.Parecer
   (
-    ParecerOracle_PK NUMBER NOT NULL ,
+    Parecer_PK NUMBER NOT NULL ,
     preAnalise CLOB ,
     analise CLOB ,
     ColaboradorPreAnalise_FK NUMBER NOT NULL ,
     ColaboradorAnalise_FK    NUMBER NOT NULL
   ) ;
-ALTER TABLE tresdbhc.ParecerOracle ADD CONSTRAINT ParOracle_PK PRIMARY KEY ( ParecerOracle_PK ) ;
-ALTER TABLE tresdbhc.ParecerOracle ADD CONSTRAINT ParOracle_ColabAnalise_FK FOREIGN KEY ( ColaboradorAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
+ALTER TABLE tresdbhc.Parecer ADD CONSTRAINT ParOracle_PK PRIMARY KEY ( Parecer_PK ) ;
+ALTER TABLE tresdbhc.Parecer ADD CONSTRAINT ParOracle_ColabAnalise_FK FOREIGN KEY ( ColaboradorAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
 DELETE CASCADE ;
-ALTER TABLE tresdbhc.ParecerOracle ADD CONSTRAINT ParOracle_ColabPreAnalise_FK FOREIGN KEY ( ColaboradorPreAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
+ALTER TABLE tresdbhc.Parecer ADD CONSTRAINT ParOracle_ColabPreAnalise_FK FOREIGN KEY ( ColaboradorPreAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
 DELETE CASCADE ;
 
 -- sequence para chave primaria ParecerOracle
-CREATE SEQUENCE tresdbhc.parOracle_seq START WITH 1 NOCACHE ORDER ;
+CREATE SEQUENCE tresdbhc.parecer_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---9
+--10
 CREATE TABLE tresdbhc.IndicadoresDBOracle
   (
     IndicadoresDBOracle_PK  NUMBER NOT NULL ,
@@ -228,18 +256,20 @@ CREATE TABLE tresdbhc.IndicadoresDBOracle
     DBOracle_FK             NUMBER NOT NULL ,
     ParecerOracle_FK        NUMBER NOT NULL
   ) ;
-ALTER TABLE tresdbhc.IndicadoresDBOracle ADD CONSTRAINT IndicDBOracle_PK PRIMARY KEY ( IndicadoresDBOracle_PK ) ;
-ALTER TABLE tresdbhc.IndicadoresDBOracle ADD CONSTRAINT IndicDBOracle_DBOracle_FK FOREIGN KEY ( DBOracle_FK ) REFERENCES tresdbhc.DBOracle ( DBOracle_PK ) ON
-DELETE CASCADE ;
-ALTER TABLE tresdbhc.IndicadoresDBOracle ADD CONSTRAINT IndicDBOracle_ParOracle_FK FOREIGN KEY ( ParecerOracle_FK ) REFERENCES tresdbhc.ParecerOracle ( ParecerOracle_PK ) ON
-DELETE CASCADE ;
-
+COMMENT ON COLUMN tresdbhc.IndicadoresDBOracle.logMode
+IS
+  'archivelog, noarchivelog' ;
+  ALTER TABLE tresdbhc.IndicadoresDBOracle ADD CONSTRAINT IndicDBOracle_PK PRIMARY KEY ( IndicadoresDBOracle_PK ) ;
+  ALTER TABLE tresdbhc.IndicadoresDBOracle ADD CONSTRAINT IndicDBOracle_DBOracle_FK FOREIGN KEY ( DBOracle_FK ) REFERENCES tresdbhc.DBOracle ( DBOracle_PK ) ON
+  DELETE CASCADE ;
+  ALTER TABLE tresdbhc.IndicadoresDBOracle ADD CONSTRAINT IndicDBOracle_ParOracle_FK FOREIGN KEY ( ParecerOracle_FK ) REFERENCES tresdbhc.Parecer ( Parecer_PK ) ON
+  DELETE CASCADE ;
 
 -- sequence para chave primaria IndicadoresDBOracle
 CREATE SEQUENCE tresdbhc.indicDBOracle_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---10
+--11
 CREATE TABLE tresdbhc.IndicadoresInstanciaOracle
   (
     IndicadoresInstanciaOracle_PK NUMBER NOT NULL ,
@@ -255,7 +285,7 @@ CREATE TABLE tresdbhc.IndicadoresInstanciaOracle
     errosAlert                    NUMBER ,
     volumetriaTrace               NUMBER ,
     swapUsadoPct                  NUMBER ,
-    statusAgentEm                 CHAR (1) ,
+    statusAgentEm                 NUMBER ,
     tempoAtividadeInstancia       NUMBER ,
     InstanciaOracle_FK            NUMBER NOT NULL ,
     ParecerOracle_FK              NUMBER NOT NULL
@@ -263,22 +293,23 @@ CREATE TABLE tresdbhc.IndicadoresInstanciaOracle
 COMMENT ON COLUMN tresdbhc.IndicadoresInstanciaOracle.statusAgentEm
 IS
   '0 - inativo, 1 - ativo' ;
+  ALTER TABLE tresdbhc.IndicadoresInstanciaOracle ADD CONSTRAINT statusAgentEm_CK_1 CHECK (statusAgentEm IN (0, 1)) ;
   ALTER TABLE tresdbhc.IndicadoresInstanciaOracle ADD CONSTRAINT IndicInstOracle_PK PRIMARY KEY ( IndicadoresInstanciaOracle_PK ) ;
   ALTER TABLE tresdbhc.IndicadoresInstanciaOracle ADD CONSTRAINT IndicInstOracle_InstOracle_FK FOREIGN KEY ( InstanciaOracle_FK ) REFERENCES tresdbhc.InstanciaOracle ( InstanciaOracle_PK ) ON
   DELETE CASCADE ;
-  ALTER TABLE tresdbhc.IndicadoresInstanciaOracle ADD CONSTRAINT IndicInstOracle_ParOracle_FK FOREIGN KEY ( ParecerOracle_FK ) REFERENCES tresdbhc.ParecerOracle ( ParecerOracle_PK ) ON
+  ALTER TABLE tresdbhc.IndicadoresInstanciaOracle ADD CONSTRAINT IndicInstOracle_ParOracle_FK FOREIGN KEY ( ParecerOracle_FK ) REFERENCES tresdbhc.Parecer ( Parecer_PK ) ON
   DELETE CASCADE ;
 
 -- sequence para chave primaria IndicadoresInstanciaOracle
 CREATE SEQUENCE tresdbhc.indicInstOracle_seq START WITH 1 NOCACHE ORDER ;  
 
 ----------------------------------------------------------------------------
---11
+--12
 CREATE TABLE tresdbhc.IndicadoresDisasterRecover
   (
     DisasterRecover_PK NUMBER NOT NULL ,
     tipo               VARCHAR2 (20 CHAR) ,
-    sincronizado       NUMBER ,
+    sincronizado       VARCHAR2 (20 CHAR) ,
     diferencaNo1       NUMBER ,
     diferencaNo2       NUMBER ,
     espacoNo1Pct       NUMBER ,
@@ -292,7 +323,7 @@ IS
   'standby, data guard' ;
   COMMENT ON COLUMN tresdbhc.IndicadoresDisasterRecover.sincronizado
 IS
-  '0 - não sincronizado, 1 - sincronizado' ;
+  ' não sincronizado, sincronizado' ;
   COMMENT ON COLUMN tresdbhc.IndicadoresDisasterRecover.diferencaNo1
 IS
   'diferença entre produção e data guard ou standby' ;
@@ -311,14 +342,14 @@ IS
   ALTER TABLE tresdbhc.IndicadoresDisasterRecover ADD CONSTRAINT DisasterRecover_PK PRIMARY KEY ( DisasterRecover_PK ) ;
   ALTER TABLE tresdbhc.IndicadoresDisasterRecover ADD CONSTRAINT IndicDr_DBOracle_FK FOREIGN KEY ( DBOracle_FK ) REFERENCES tresdbhc.DBOracle ( DBOracle_PK ) ON
   DELETE CASCADE ;
-  ALTER TABLE tresdbhc.IndicadoresDisasterRecover ADD CONSTRAINT IndicDr_ParOracle_FK FOREIGN KEY ( ParecerOracle_FK ) REFERENCES tresdbhc.ParecerOracle ( ParecerOracle_PK ) ON
+  ALTER TABLE tresdbhc.IndicadoresDisasterRecover ADD CONSTRAINT IndicDr_ParOracle_FK FOREIGN KEY ( ParecerOracle_FK ) REFERENCES tresdbhc.Parecer ( Parecer_PK ) ON
   DELETE CASCADE ;
 
 -- sequence para chave primaria IndicadoresDisasterRecover
 CREATE SEQUENCE tresdbhc.indicDisasterRecover_seq START WITH 1 NOCACHE ORDER ;
   
 ----------------------------------------------------------------------------
---12
+--13
 CREATE TABLE tresdbhc.TicketTecnico
   (
     TicketTecnico_PK NUMBER NOT NULL ,
@@ -331,12 +362,12 @@ ALTER TABLE tresdbhc.TicketTecnico ADD CONSTRAINT TicketTecnico_PK PRIMARY KEY (
 CREATE SEQUENCE tresdbhc.ticketTec_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---13
+--14
 CREATE TABLE tresdbhc.InstanciaSQLServer
   (
     InstanciaSQLServer_PK    NUMBER NOT NULL ,
     nomeInstancia            VARCHAR2 (50 CHAR) NOT NULL ,
-    tipoInstancia            VARCHAR2 (50 CHAR) ,
+    tipoInstancia            VARCHAR2 (20 CHAR) ,
     ServidorRdbms_FK         NUMBER NOT NULL ,
     BancoMonitorTicket_FK    NUMBER NOT NULL ,
     ColaboradorPreAnalise_FK NUMBER NOT NULL ,
@@ -359,25 +390,6 @@ IS
 CREATE SEQUENCE tresdbhc.instSQLSrv_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
---14
-CREATE TABLE tresdbhc.ParecerSQLServer
-  (
-    ParecerSQLServer_PK NUMBER NOT NULL ,
-    preAnalise CLOB ,
-    analise CLOB ,
-    ColaboradorAnalise_FK    NUMBER NOT NULL ,
-    ColaboradorPreAnalise_FK NUMBER NOT NULL
-  ) ;
-ALTER TABLE tresdbhc.ParecerSQLServer ADD CONSTRAINT ParSQLSrv_PK PRIMARY KEY ( ParecerSQLServer_PK ) ;
-ALTER TABLE tresdbhc.ParecerSQLServer ADD CONSTRAINT ParSQLSrv_ColabAnalise_FK FOREIGN KEY ( ColaboradorAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
-DELETE CASCADE ;
-ALTER TABLE tresdbhc.ParecerSQLServer ADD CONSTRAINT ParSQLSrvr_ColabPreAnalise_FK FOREIGN KEY ( ColaboradorPreAnalise_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ON
-DELETE CASCADE ;
-
--- sequence para chave primaria ParecerSQLServer
-CREATE SEQUENCE tresdbhc.parSQLSrv_seq START WITH 1 NOCACHE ORDER ;
-
-----------------------------------------------------------------------------
 --15
 CREATE TABLE tresdbhc.IndicadoresBancosSQLServer
   (
@@ -388,19 +400,48 @@ CREATE TABLE tresdbhc.IndicadoresBancosSQLServer
     recoveryMode                   VARCHAR2 (30 CHAR) ,
     tamanhoBkpBancoFull            NUMBER ,
     statusBkpBancoFull             VARCHAR2 (30 CHAR) ,
+    dataUltimoBkpFull              DATE ,
+    qtdErrosBkpFull                NUMBER ,
     qtdErrosBkpDiferencial         NUMBER ,
     qtdErrosBkpLog                 NUMBER ,
     tabelaEstatisticaDesatualizada VARCHAR2 (30 CHAR) ,
-    dataUltimoBkpFull              DATE ,
     checkDb                        VARCHAR2 (30 CHAR) ,
     indexDesativada                VARCHAR2 (30 CHAR) ,
-    ParecerSQLServer_FK            NUMBER NOT NULL ,
-    InstanciaSQLServer_FK          NUMBER NOT NULL
+    mirrorExiste                   VARCHAR2 (5 CHAR) ,
+    mirrorSincronizado             VARCHAR2 (5 CHAR) ,
+    mirrorTipoSincronismo          VARCHAR2 (30 CHAR) ,
+    mirrorFailover                 VARCHAR2 (30 CHAR) ,
+    mirrorWitness                  VARCHAR2 (5 CHAR) ,
+    mirrorOpMode                   VARCHAR2 (30 CHAR) ,
+    InstanciaSQLServer_FK          NUMBER NOT NULL ,
+    Parecer_FK                     NUMBER NOT NULL
   ) ;
-ALTER TABLE tresdbhc.IndicadoresBancosSQLServer ADD CONSTRAINT IndicBdSQLSrv_PK PRIMARY KEY ( IndicadoresBancosSQLServer_PK ) ;
-ALTER TABLE tresdbhc.IndicadoresBancosSQLServer ADD CONSTRAINT IndicBdSQLSrv_InstSQLSrv_FK FOREIGN KEY ( InstanciaSQLServer_FK ) REFERENCES tresdbhc.InstanciaSQLServer ( InstanciaSQLServer_PK ) ;
-ALTER TABLE tresdbhc.IndicadoresBancosSQLServer ADD CONSTRAINT IndicBdSQLSrv_ParSQLSrv_FK FOREIGN KEY ( ParecerSQLServer_FK ) REFERENCES tresdbhc.ParecerSQLServer ( ParecerSQLServer_PK ) ON
-DELETE CASCADE ;
+COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.recoveryMode
+IS
+  'simple, full, bulk_logged' ;
+  COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.mirrorExiste
+IS
+  'sim, nao' ;
+  COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.mirrorSincronizado
+IS
+  'sim, nao' ;
+  COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.mirrorTipoSincronismo
+IS
+  'sincrono, assincrono' ;
+  COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.mirrorFailover
+IS
+  'automatico,  manual,  forced' ;
+  COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.mirrorWitness
+IS
+  'sim, nao' ;
+  COMMENT ON COLUMN tresdbhc.IndicadoresBancosSQLServer.mirrorOpMode
+IS
+  'high availability,  high-protection,  high-performance' ;
+  ALTER TABLE tresdbhc.IndicadoresBancosSQLServer ADD CONSTRAINT IndicBdSQLSrv_PK PRIMARY KEY ( IndicadoresBancosSQLServer_PK ) ;
+  ALTER TABLE tresdbhc.IndicadoresBancosSQLServer ADD CONSTRAINT IndBdSQLSrv_BdInstSQLSrv_FK FOREIGN KEY ( InstanciaSQLServer_FK ) REFERENCES tresdbhc.InstanciaSQLServer ( InstanciaSQLServer_PK ) ON
+  DELETE CASCADE ;
+  ALTER TABLE tresdbhc.IndicadoresBancosSQLServer ADD CONSTRAINT IndicBdSQLSrv_ParSQLSrv_FK FOREIGN KEY ( Parecer_FK ) REFERENCES tresdbhc.Parecer ( Parecer_PK ) ON
+  DELETE CASCADE ;
 
 -- sequence para chave primaria IndicadoresBancosSQLServer
 CREATE SEQUENCE tresdbhc.indicBdSQLSrv_seq START WITH 1 NOCACHE ORDER ;
@@ -424,12 +465,13 @@ CREATE TABLE tresdbhc.IndicadoresInstanciaSQLServer
     maximoMemoria               NUMBER ,
     memoriaUsada                NUMBER ,
     InstanciaSQLServer_FK       NUMBER NOT NULL ,
-    ParecerSQLServer_FK         NUMBER NOT NULL
+    ParecerSQLServer_FK         NUMBER NOT NULL ,
+    Parecer_FK                  NUMBER NOT NULL
   ) ;
 ALTER TABLE tresdbhc.IndicadoresInstanciaSQLServer ADD CONSTRAINT InsdicInstSQLSrv_PK PRIMARY KEY ( IndicadoresInstSQLServer_PK ) ;
-ALTER TABLE tresdbhc.IndicadoresInstanciaSQLServer ADD CONSTRAINT InsdInstSQLSrv_InstSQLSrv_FK FOREIGN KEY ( InstanciaSQLServer_FK ) REFERENCES tresdbhc.InstanciaSQLServer ( InstanciaSQLServer_PK ) ON
+ALTER TABLE tresdbhc.IndicadoresInstanciaSQLServer ADD CONSTRAINT IndInstSQLSrv_InstSQLSrv_FK FOREIGN KEY ( InstanciaSQLServer_FK ) REFERENCES tresdbhc.InstanciaSQLServer ( InstanciaSQLServer_PK ) ON
 DELETE CASCADE ;
-ALTER TABLE tresdbhc.IndicadoresInstanciaSQLServer ADD CONSTRAINT InsdicInstSQLSrv_ParSQLSrv_FK FOREIGN KEY ( ParecerSQLServer_FK ) REFERENCES tresdbhc.ParecerSQLServer ( ParecerSQLServer_PK ) ON
+ALTER TABLE tresdbhc.IndicadoresInstanciaSQLServer ADD CONSTRAINT IndInstSQLSrv_ParSQLSrv_FK FOREIGN KEY ( Parecer_FK ) REFERENCES tresdbhc.Parecer ( Parecer_PK ) ON
 DELETE CASCADE ;
 
 -- sequence para chave primaria IndicadoresInstanciaSQLServer
@@ -437,27 +479,31 @@ CREATE SEQUENCE tresdbhc.indicInstSQLSrv_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
 --17
-CREATE TABLE tresdbhc.acessos
-  (
-    Acessos_PK NUMBER NOT NULL ,
-    permissoes VARCHAR2 (100 CHAR)
-  ) ;
-ALTER TABLE Acessos ADD CONSTRAINT Acessos_PK PRIMARY KEY ( Acessos_PK ) ;
+CREATE OR REPLACE VIEW tresdbhc.paginas (paginas_PK, idAplicacao, nomeAplicacao, nomePagina, tituloPagina, 
+CONSTRAINT Paginas_PK PRIMARY KEY (paginas_PK) RELY DISABLE NOVALIDATE)
+AS 
+	SELECT page_id, 
+	application_id, 
+	application_name, 
+	page_name, 
+	page_title 
+FROM apex_050000.apex_application_pages 
+WHERE application_id = 102;
 
 -- sequence para chave primaria IndicadoresInstanciaSQLServer
-CREATE SEQUENCE tresdbhc.acessos_seq START WITH 1 NOCACHE ORDER ;
+CREATE SEQUENCE tresdbhc.paginas_seq START WITH 1 NOCACHE ORDER ;
 
 ----------------------------------------------------------------------------
 --18
-CREATE TABLE tresdbhc.ControleAcesso
+CREATE TABLE tresdbhc.ControleAcessoPaginas
   (
     ControleAcesso_PK NUMBER NOT NULL ,
     Colaborador_FK    NUMBER NOT NULL ,
-    Acessos_FK        NUMBER NOT NULL
+    PaginasAcessos_FK NUMBER NOT NULL
   ) ;
-ALTER TABLE tresdbhc.ControleAcesso ADD CONSTRAINT ControleAcesso_PK PRIMARY KEY ( ControleAcesso_PK ) ;
-ALTER TABLE tresdbhc.ControleAcesso ADD CONSTRAINT ControleAcesso_Acessos_FK FOREIGN KEY ( Acessos_FK ) REFERENCES tresdbhc.Acessos ( Acessos_PK ) ;
-ALTER TABLE tresdbhc.ControleAcesso ADD CONSTRAINT ControleAcesso_Colab_FK FOREIGN KEY ( Colaborador_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ;
+ALTER TABLE tresdbhc.ControleAcessoPaginas ADD CONSTRAINT ControleAcesso_PK PRIMARY KEY ( ControleAcesso_PK ) ;
+ALTER TABLE tresdbhc.ControleAcessoPaginas ADD CONSTRAINT ControleAcesso_Paginas_FK FOREIGN KEY ( PaginasAcessos_FK ) REFERENCES tresdbhc.Paginas ( paginas_PK ) ;
+ALTER TABLE tresdbhc.ControleAcessoPaginas ADD CONSTRAINT ControleAcesso_Colab_FK FOREIGN KEY ( Colaborador_FK ) REFERENCES tresdbhc.Colaborador ( Colaborador_PK ) ;
 
 -- sequence para chave primaria IndicadoresInstanciaSQLServer
 CREATE SEQUENCE tresdbhc.controleAcesso_seq START WITH 1 NOCACHE ORDER ;
@@ -479,3 +525,16 @@ ALTER TABLE tresdbhc.itensEnviados  ADD CONSTRAINT itensEnviados_PK PRIMARY KEY 
 
 -- sequence para chave primaria IndicadoresInstanciaSQLServer
 CREATE SEQUENCE tresdbhc.itensEnviados_seq START WITH 1 NOCACHE ORDER ;
+
+----------------------------------------------------------------------------
+--20
+CREATE TABLE tresdbhc.caixaSaida 
+(
+  CaixaSaida_PK NUMBER NOT NULL, 
+  id_relatorio NUMBER, 
+  criacao_mensagem DATE 
+ );
+ALTER TABLE tresdbhc.caixaSaida ADD CONSTRAINT caixaSaida_PK PRIMARY KEY ( CaixaSaida_PK ) ;
+
+-- sequence para chave primaria IndicadoresInstanciaSQLServer
+CREATE SEQUENCE tresdbhc.caixaSaida_seq START WITH 1 NOCACHE ORDER ;

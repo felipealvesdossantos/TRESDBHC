@@ -60,6 +60,19 @@
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="celular" id="3676AE9A-EEB6-A72D-5895-2769F469E376">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 19:08:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="email" id="1A173FA5-FF3F-46C3-F4A3-56D09AF0B203">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-11 19:17:47 UTC</createdTime>

@@ -36,6 +36,7 @@
 <Column name="funcao" id="985F41BA-39E3-DFE1-0FA0-3D538D20E19E">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 00:40:36 UTC</createdTime>
+<commentInRDBMS>dba, coordenador, diretor, estagiario, vendedor, assistente administrativo, secretaria</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -99,14 +100,15 @@
 <Column name="ativo" id="7F413F6C-55B2-F311-02E1-6CC0183B023B">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-16 18:43:43 UTC</createdTime>
-<commentInRDBMS>0 - inativo, 1 - ativo</commentInRDBMS>
+<commentInRDBMS> inativo, ativo</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="GerenteId_FK" id="C326DF01-8821-FB0A-E0AC-F627CE4A1470">
@@ -122,6 +124,21 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="E67F9E34-15D3-0244-6FB6-0ADE23D349B6" referredColumn="DB2D666A-FFFA-FD7A-609E-3185FCA2340D"/>
+</associations>
+</Column>
+<Column name="Departamento_FK" id="E07E993E-F70C-4F02-CE6B-19756CC23A68">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-19 14:49:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D841E1EF-C29E-05D8-E68F-E28CDF2B4411" referredColumn="47557301-ABD0-673E-B126-C9040CDAA201"/>
 </associations>
 </Column>
 </columns>
@@ -147,6 +164,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C326DF01-8821-FB0A-E0AC-F627CE4A1470"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C851255-DBF2-6FB8-9742-4EBC43E6FF5A" name="Colab_Depart_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-19 14:49:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E07E993E-F70C-4F02-CE6B-19756CC23A68"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

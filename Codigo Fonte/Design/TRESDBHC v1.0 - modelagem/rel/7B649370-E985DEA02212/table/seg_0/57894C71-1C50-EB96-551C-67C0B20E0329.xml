@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="57894C71-1C50-EB96-551C-67C0B20E0329" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="IndicadoresDisasterRecoverSqlsrv">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:37:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IndicDisasterRecoverSqlsrv_PK" id="2215D595-6E7F-28F0-882E-DC0F86E2A0CB">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:47:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeInstancia" id="32A6110E-5428-1915-CB82-9B7C4AB48459">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:47:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="versaoInstancia" id="F736C920-2FCE-51D4-3A50-BB9CCFB936F8">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:48:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoSincronismo" id="6F85E459-FACE-A59E-226C-9C12A256A4D7">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:50:40 UTC</createdTime>
+<commentInRDBMS>sincrono, assincrono</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="failover" id="3C5211EB-8B7F-4CCA-6088-70AE9E63EFF0">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:51:40 UTC</createdTime>
+<commentInRDBMS>automatico,  manual,  forced</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dbWitness" id="18F43F2C-472C-A63E-B792-650B8FFABFA5">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:52:17 UTC</createdTime>
+<commentInRDBMS>sim, nao</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modeOperacao" id="AA7DA3D0-8DDD-E2A1-544A-3ED7F588AD38">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:53:03 UTC</createdTime>
+<commentInRDBMS>high availability,  high-protection,  high-performance</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sincronizado" id="FDD5E87A-2436-64C8-D0ED-8FA907798771">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:53:57 UTC</createdTime>
+<commentInRDBMS>sim, nao</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomeDatabase" id="6B29CC54-9D6F-7EBF-9BA0-5972E8C93944">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:55:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="682E2564-FEEC-2D9E-93C8-7D84C8306E61" name="IndicadoresDisasterRecoverSqlsrv_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:47:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2215D595-6E7F-28F0-882E-DC0F86E2A0CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="751EC92C-90D7-B6F7-8E04-F2CFCE110869" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="IndicadoresDisasterRecover">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="751EC92C-90D7-B6F7-8E04-F2CFCE110869" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="IndicadoresDisasterRecoverOrcl">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-16 13:30:35 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
@@ -40,15 +40,16 @@
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-16 13:33:59 UTC</createdTime>
 <comment>0 - não sincronizado, 1 - sincronizado</comment>
-<commentInRDBMS>0 - não sincronizado, 1 - sincronizado</commentInRDBMS>
+<commentInRDBMS> não sincronizado, sincronizado</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
 <notes>0 - não sincronizado, 1 - sincronizado&lt;br/&gt;</notes>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="diferencaNo1" id="D22276DF-53A0-8565-2BA2-DEA6BA03A6B4">

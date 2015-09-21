@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="576BE42D-1B15-A96C-3D5E-7BBB43E6EEBD" containerWithKeyObject="06FB7360-2557-1FF4-7416-5038FF018899" localFKIndex="1649AA6F-597A-6A27-91CD-3D43BD5F2236" name="ControleAcessoPaginas_Paginas_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:14:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F4B07A85-3B00-41F0-7179-66EE072DE914</referredTableID>
+<keyObject>235A82F8-D23D-978D-111F-4139BC7DD7E1</keyObject>
+<referredKeyID>235A82F8-D23D-978D-111F-4139BC7DD7E1</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

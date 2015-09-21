@@ -71,7 +71,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="jobErros" id="17B2FCF4-0640-A3AF-A968-662065D94DB4">
+<Column name="errosJob" id="17B2FCF4-0640-A3AF-A968-662065D94DB4">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 04:02:13 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
@@ -88,6 +88,18 @@
 <createdTime>2015-09-12 04:02:27 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="errosSo" id="DE7A332F-260D-CBF2-B229-30A919528EF8">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:23:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -204,9 +216,30 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Parecer_FK" id="9867636F-52F4-59CD-CA25-C2580224DA79">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-19 18:57:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="1B7A70C1-4692-C4F9-1DB7-5A5F13FA72A8" referredColumn="41797DD8-F91F-DE60-4103-7910F909387D"/>
+<colAssociation fkAssociation="7D778F02-FFE7-0E73-B6C9-A4E22B03B0F7" referredColumn="274DCF5E-0899-921A-F305-E5D77F270643"/>
 </associations>
+</Column>
+<Column name="Column_18" id="4D7C3B74-EF63-4F34-7654-ED2844FC669F">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:22:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -222,7 +255,7 @@
 <colUsage columnID="906030B7-352D-5366-2FE8-7550E3DA9DD3"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="478CBF7D-58CF-C2B6-BA34-317403136A72" name="InsdInstSQLSrv_InstSQLSrv_FK">
+<ind_PK_UK id="478CBF7D-58CF-C2B6-BA34-317403136A72" name="IndInstSQLSrv_InstSQLSrv_FK">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 04:06:16 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
@@ -233,15 +266,15 @@
 <colUsage columnID="5C3F3A5B-69E6-3A95-DB80-5087BFC9F041"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="28890A4A-F2ED-0F33-E630-6221A7A67CCE" name="InsdicInstSQLSrv_ParSQLSrv_FK">
+<ind_PK_UK id="DD585A53-9727-7C7F-9B7F-0A203CC8B550" name="IndInstSQLSrv_ParSQLSrv_FK">
 <createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-12 04:15:16 UTC</createdTime>
+<createdTime>2015-09-19 18:57:58 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
-<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6C188ECB-1837-7019-F2A4-D8890B17FAE5"/>
+<colUsage columnID="9867636F-52F4-59CD-CA25-C2580224DA79"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="45B173BC-5C22-C2AE-DF44-2FBEF794B02C" containerWithKeyObject="06FB7360-2557-1FF4-7416-5038FF018899" localFKIndex="37CE6860-FBEC-11B8-EC5D-507E2AE80B7D" name="ControleAcesso_Acessos_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="043394D1-1C07-5292-FC4F-7FA73F992851" containerWithKeyObject="6B6AF28B-8766-CED2-5F48-011FA39D83AB" localFKIndex="07099CED-921E-B9E1-5ECD-19D0FAEA3273" name="Departamento_Colaborador_FK">
 <createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-18 19:53:37 UTC</createdTime>
+<createdTime>2015-09-19 14:50:53 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
 <ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
 <deleteRule>NO ACTION</deleteRule>

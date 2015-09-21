@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="F4B07A85-3B00-41F0-7179-66EE072DE914" schemaObject="88B4FDF8-4C96-B61B-D185-0D0A48F9759B" name="Paginas">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:07:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<ordsAlias>view_5</ordsAlias>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT application_id AS application_id,&lt;br/&gt;  application_name,&lt;br/&gt;  page_id,&lt;br/&gt;  page_name,&lt;br/&gt;  page_title&lt;br/&gt;FROM apex_050000.apex_application_pages&lt;br/&gt;WHERE application_id = 102</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="application_id" id="F665C6E9-CAA8-7726-E92D-A8EB721B4BE4">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:09:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>application_id</alias>
+<dataType>UNKNOWN</dataType>
+<expression>application_id</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="application_name" id="E439AC1C-0672-A11D-2116-9C3DA6FA3220">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:09:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>UNKNOWN</dataType>
+<expression>application_name</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="page_id" id="167BA3BD-6487-A72B-51FD-29950539CA47">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:09:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>UNKNOWN</dataType>
+<expression>page_id</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="page_name" id="F88E770F-C07C-175B-548F-275B45C6BC7B">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:09:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>UNKNOWN</dataType>
+<expression>page_name</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="page_title" id="DB16C910-B1AA-C943-9CEF-8AACF328E78C">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:09:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>UNKNOWN</dataType>
+<expression>page_title</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.ViewIndex">
+<ind_PK_UK id="235A82F8-D23D-978D-111F-4139BC7DD7E1" name="Paginas_PK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:11:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="167BA3BD-6487-A72B-51FD-29950539CA47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</TableView>

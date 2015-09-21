@@ -87,7 +87,7 @@
 <colUsage columnID="A1B44242-397C-0988-549C-440697877DCA"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="07312248-AB65-6194-4B0A-0B92B837C69C" name="InstOracle_SrvRdbms_FK">
+<ind_PK_UK id="07312248-AB65-6194-4B0A-0B92B837C69C" name="InstOracle_SrvOracle_FK">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-16 18:39:08 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
@@ -97,14 +97,6 @@
 <indexColumnUsage>
 <colUsage columnID="FE5D448C-99FA-4253-2A98-2F97B6ED5DE2"/>
 </indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="6EC1BD34-9D9E-E9AC-2095-3A059AE8FA57" name="InstOracle_SrvOracle_FK">
-<createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-18 18:58:44 UTC</createdTime>
-<generatorID>Gerado pelo usuário</generatorID>
-<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
 </ind_PK_UK>
 </indexes>
 </Table>

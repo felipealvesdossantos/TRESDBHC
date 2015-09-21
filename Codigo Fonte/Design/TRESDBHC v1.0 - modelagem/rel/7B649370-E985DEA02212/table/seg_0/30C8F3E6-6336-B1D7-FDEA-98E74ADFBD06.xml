@@ -170,16 +170,16 @@
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 01:31:53 UTC</createdTime>
 <comment>0 - inativo, 1 - ativo</comment>
-<commentInRDBMS>0 - inativo, 1 - ativo</commentInRDBMS>
+<commentInRDBMS> inativo, ativo</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
 <notes>0 - inativo, 1 - ativo</notes>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="tempoAtividadeInstancia" id="68633A72-407C-00E8-34D5-1BC774F79F0D">

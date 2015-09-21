@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D841E1EF-C29E-05D8-E68F-E28CDF2B4411" containerWithKeyObject="27CB09E9-0302-C99D-EF4F-10A1394B7586" localFKIndex="1C851255-DBF2-6FB8-9742-4EBC43E6FF5A" name="Colab_Depart_FK">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-19 14:49:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>6B6AF28B-8766-CED2-5F48-011FA39D83AB</referredTableID>
+<keyObject>A2166B6C-AF18-3B4E-F336-C1183A3256FD</keyObject>
+<referredKeyID>A2166B6C-AF18-3B4E-F336-C1183A3256FD</referredKeyID>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

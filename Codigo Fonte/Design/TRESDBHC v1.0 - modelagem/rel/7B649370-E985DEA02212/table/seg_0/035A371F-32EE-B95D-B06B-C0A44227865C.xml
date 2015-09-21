@@ -63,16 +63,15 @@
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-11 19:35:19 UTC</createdTime>
 <comment>oracle, sqlserver</comment>
-<commentInRDBMS>oracle, sqlserver</commentInRDBMS>
+<commentInRDBMS>oracle,  sqlserver</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
 <notes>oracle, sqlserver</notes>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 CHAR</dataTypeSize>
-<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="ClienteContrato_FK" id="48913673-4B33-3FDD-14F9-251F1AD40701">

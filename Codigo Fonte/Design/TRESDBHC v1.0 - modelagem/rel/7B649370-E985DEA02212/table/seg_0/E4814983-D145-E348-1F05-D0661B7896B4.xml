@@ -61,6 +61,7 @@
 <Column name="recoveryMode" id="AFE860B0-45DD-4E32-50DD-DE07D44E8161">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-12 03:49:53 UTC</createdTime>
+<commentInRDBMS>simple, full, bulk_logged</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
 <ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -105,6 +106,18 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtdErrosBkpFull" id="B38BCDC4-2044-25DF-4E40-473ADE0606F8">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 17:24:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -171,19 +184,89 @@
 <ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ParecerSQLServer_FK" id="AC06918B-8CBB-31EE-7E42-1D950E442731">
+<Column name="mirrorExiste" id="7C88817F-B1B9-E837-2457-107E7E787D11">
 <createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-12 04:13:24 UTC</createdTime>
+<createdTime>2015-09-21 17:58:00 UTC</createdTime>
+<commentInRDBMS>sim, nao</commentInRDBMS>
 <generatorID>Gerado pelo usuário</generatorID>
-<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="7EA717B2-CA8D-D663-DC4D-CEE9069D1807" referredColumn="41797DD8-F91F-DE60-4103-7910F909387D"/>
-</associations>
+</Column>
+<Column name="mirrorSincronizado" id="AF02F6A9-DC59-6530-22E4-01EFD84CFFEC">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 18:00:51 UTC</createdTime>
+<commentInRDBMS>sim, nao</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mirrorTipoSincronismo" id="D9D68371-9AF4-8F59-08ED-792A804AC953">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 18:06:50 UTC</createdTime>
+<commentInRDBMS>sincrono, assincrono</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mirrorFailover" id="9FD06023-1BA4-5A95-2DDC-5356B5CBEE99">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 18:07:29 UTC</createdTime>
+<commentInRDBMS>automatico,  manual,  forced</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mirrorWitness" id="FE52E4FE-B3CA-08E2-D199-DF387E255CD0">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 18:08:09 UTC</createdTime>
+<commentInRDBMS>sim, nao</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mirrorOpMode" id="5C5F0761-4C05-9AFA-B293-64CF0221C18E">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-21 18:08:43 UTC</createdTime>
+<commentInRDBMS>high availability,  high-protection,  high-performance</commentInRDBMS>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="InstanciaSQLServer_FK" id="189ED31C-C6B9-3615-D879-46E1005FEAC6">
 <createdBy>3DB-felipe</createdBy>
@@ -197,6 +280,20 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="B8587C86-4FB9-D1A2-5247-E80AEB8D37FE" referredColumn="A9B79B49-26BD-29F6-88A0-6884C7544F7A"/>
+</associations>
+</Column>
+<Column name="Parecer_FK" id="2A17C134-E97D-3B57-C398-DDBF8D17B84B">
+<createdBy>3DB-felipe</createdBy>
+<createdTime>2015-09-19 18:56:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32A1FEE2-EF6B-C285-829C-13DDBDF6ECD8" referredColumn="274DCF5E-0899-921A-F305-E5D77F270643"/>
 </associations>
 </Column>
 </columns>
@@ -213,26 +310,7 @@
 <colUsage columnID="979B98FC-E519-C840-36B9-F5B45C5EE852"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5BAA31C3-66E2-8B27-8F9D-1CC6F02108B4" name="IndBdSQLSrv_BdInstSQLSrv_FK">
-<createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-17 12:36:23 UTC</createdTime>
-<generatorID>Gerado pelo usuário</generatorID>
-<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="7FE63605-61AE-506F-89F1-325AF59A7D4F" name="IndicBdSQLSrv_ParSQLSrv_FK">
-<createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-12 04:13:39 UTC</createdTime>
-<generatorID>Gerado pelo usuário</generatorID>
-<ownerDesignName>modelagemDM - DBHC-v.01</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="AC06918B-8CBB-31EE-7E42-1D950E442731"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="C11A5E28-3C82-1A18-48BB-B255C7C64295" name="IndicBdSQLSrv_InstSQLSrv_FK">
+<ind_PK_UK id="C11A5E28-3C82-1A18-48BB-B255C7C64295" name="IndBdSQLSrv_BdInstSQLSrv_FK">
 <createdBy>3DB-felipe</createdBy>
 <createdTime>2015-09-16 18:03:53 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
@@ -243,13 +321,16 @@
 <colUsage columnID="189ED31C-C6B9-3615-D879-46E1005FEAC6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3B418250-3BE0-CBB9-1349-49286CC4967B" name="IndBdSQLSrv_BdInstSQLSrv_FK">
+<ind_PK_UK id="9611EE75-41BC-EDC1-509C-7499CD5D96C9" name="IndicBdSQLSrv_ParSQLSrv_FK">
 <createdBy>3DB-felipe</createdBy>
-<createdTime>2015-09-18 18:58:44 UTC</createdTime>
+<createdTime>2015-09-19 18:56:52 UTC</createdTime>
 <generatorID>Gerado pelo usuário</generatorID>
 <ownerDesignName>TRESDBHC v1.0 - modelagem</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A17C134-E97D-3B57-C398-DDBF8D17B84B"/>
+</indexColumnUsage>
 </ind_PK_UK>
 </indexes>
 </Table>
